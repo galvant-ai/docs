@@ -1,0 +1,4 @@
+/* Keep descriptions in SEO metadata while hiding the page-header subtitle. */
+#header > .prose {
+  display: none;
+}

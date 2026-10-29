@@ -1,0 +1,140 @@
+---
+title: "Table cards"
+description: "Find records, highlight exceptions, show totals, and build pivot tables. Follow practical table examples and learn which viewing changes are saved."
+keywords: ["tables", "search", "filters", "conditional formatting", "pivot", "totals"]
+sidebarTitle: "Table cards"
+---
+
+Scout and Dash can present detailed records or grouped comparisons as a table. You can search its rows, highlight exceptions, and summarize the results.
+
+You can explore a shared dashboard's tables. To change saved formatting, summaries, or pivots, use a dashboard you own or make your own copy with **Duplicate and edit**.
+
+The examples below use outstanding invoices. You can ask Dash for this view, or apply the same steps to a table you already have:
+
+<Prompt description="Show outstanding invoices in a table with customer, invoice month, outstanding amount, and days overdue.">
+  Show outstanding invoices in a table with customer, invoice month, outstanding amount, and days overdue.
+</Prompt>
+
+## Find and filter records
+
+<Tabs>
+  <Tab title="Find a record">
+    Hover over the card header and click **Search table**, the magnifying-glass button. Enter a customer's name in **Search every column**, then press **Enter** or click **Search**. The search includes rows beyond those currently visible.
+
+    <Info>
+      **GIF placeholder: TABLE-06**
+
+      Search the invoice table for one customer and show the matching records and active search. End with the search result visible.
+    </Info>
+  </Tab>
+  <Tab title="Filter rows">
+    To focus on invoices more than 30 days overdue:
+
+    1. Click the **Days overdue** column heading and open **Filter**.
+    2. Choose **>**, enter **30**, and click **Apply**.
+    3. Use **Clear** in that filter menu to restore the rows.
+
+    You can apply conditions to several columns together.
+
+    <Info>
+      **GIF placeholder: TABLE-01**
+
+      Filter Days overdue to greater than 30. Show the active filter and the remaining invoices, then clear it.
+    </Info>
+  </Tab>
+  <Tab title="Sort results">
+    Click **Outstanding amount** > **Sort** > **Sort descending** to bring the largest balances to the top. Choose **Clear sort** to remove it. Sorting another column replaces the current sort.
+
+    <Info>
+      **Screenshot placeholder: TABLE-07**
+
+      Show Outstanding amount sorted descending, with the column's active sort indicator and the largest balances at the top.
+    </Info>
+  </Tab>
+</Tabs>
+
+These actions change your current table view. To change a shared input across several cards, use [dashboard variables](/dashboards/variables).
+
+## Format and highlight values
+
+On a table you can edit, click **Outstanding amount** > **Format** > **Currency** and choose its currency. Set **Decimals** if needed. Formatting changes how values appear; ask Dash if the amounts themselves need conversion.
+
+<Info>
+  **Screenshot placeholder: TABLE-08**
+
+  Show the Outstanding amount Format menu and the column displaying its chosen currency and decimal places.
+</Info>
+
+Use conditional formatting to make exceptions stand out. For example, highlight invoices over 30 days overdue:
+
+<Steps>
+  <Step title="Create the condition">
+    Open **Days overdue** > **Conditional format** > **Add rule**. Choose **>** and enter **30**.
+  </Step>
+  <Step title="Choose the highlight">
+    Under **Fill**, choose a color for those cells, then click **Add rule**. Only matching values receive the highlight.
+  </Step>
+</Steps>
+
+Open the saved rule under **Existing formats** to change it with **Save rule** or remove it with **Delete**. If rules overlap, the first matching rule wins.
+
+<Info>
+  **GIF placeholder: TABLE-03**
+
+  Add a fill rule for Days overdue greater than 30. Show matching and nonmatching cells together so the outcome is clear.
+</Info>
+
+## Show totals and summaries
+
+Open **Outstanding amount** > **Calculate** > **Sum**. The total appears at the bottom of the table. Turn on **Show in card header** to keep it visible beside the card title too.
+
+The total covers the rows remaining after search and filters, including rows outside the visible area. Filtering to overdue invoices therefore updates the total to those invoices.
+
+<Info>
+  **GIF placeholder: TABLE-04**
+
+  Add Sum to Outstanding amount, then filter Days overdue to greater than 30. Show the total changing to match the filtered invoices.
+</Info>
+
+## Compare groups with a pivot table
+
+A pivot turns records into a grid of grouped totals. For the invoice example, ask Dash:
+
+<Prompt description="Turn this invoice table into a pivot showing total outstanding amount by customer in rows and invoice month in columns. Include totals.">
+  Turn this invoice table into a pivot showing total outstanding amount by customer in rows and invoice month in columns. Include totals.
+</Prompt>
+
+Review the customer rows, month columns, and summed amounts, then approve the change. You can ask Dash to change the grouping or use a different summary later.
+
+<Info>
+  **Video placeholder: TABLE-05**
+
+  Show the invoice rows, send the pivot request, and inspect the proposed customer-by-month grid. Highlight its row groups, month columns, and totals before approving.
+</Info>
+
+## Adjust columns and understand saved changes
+
+Drag a heading to move a column, or drag its edge to resize it. The column menu also lets you rename, hide, freeze, and wrap columns.
+
+<Info>
+  **GIF placeholder: TABLE-02**
+
+  Freeze Customer, then scroll the invoice table horizontally. Show the customer names staying visible beside the later columns.
+</Info>
+
+| Change | How it is kept |
+| --- | --- |
+| Search, sort, and column filters | Temporary for the current table view. |
+| Column layout, formatting, and summaries | Saved directly when you can edit the table. |
+| A new table or pivot requested from Dash | Saved when you approve the proposal. |
+
+In Chat, use the original table card's column menus for saved formatting and summaries. **Expand table** opens a larger view for searching, sorting, and filtering records.
+
+<AccordionGroup>
+  <Accordion title="Summarize rates and percentages">
+    For a rate, use **Calculate** > **Weighted average by** and choose its weighting column. A defect rate weighted by inspected units gives larger batches their appropriate contribution. Percentage columns do not offer a simple sum or unweighted average. Percent formatting expects fractions: 0.125 displays as 12.5%.
+  </Accordion>
+  <Accordion title="Pivot formatting and size">
+    Generated month or category headings come from the pivot values. Columns for the same measure share formatting, and generated headings cannot be renamed individually. A pivot supports up to 50 generated columns; ask Dash for broader groups if yours would be wider.
+  </Accordion>
+</AccordionGroup>

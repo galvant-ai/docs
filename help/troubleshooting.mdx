@@ -1,0 +1,122 @@
+---
+title: "Troubleshooting"
+description: "Resolve unexpected answers, file and dictation issues, missing dashboards, pending changes, stale results, and failed exports or scheduled report emails."
+keywords: ["troubleshooting", "errors", "microphone", "file upload", "failed email"]
+sidebarTitle: "Troubleshooting"
+---
+
+Start with the symptom you can see. Keep the relevant conversation or dashboard open so you can check its context and the exact error message.
+
+## Scout's answer is unexpected or incomplete
+
+1. Open **Show logic** beneath the answer to follow Scout's thought process, steps, and sources.
+2. Open **Show logic** on the result card when the question concerns a particular table or chart.
+3. Continue the same conversation and name the discrepancy. Give the expected date range, definition, or example record when you have one.
+
+For an attached spreadsheet, check whether the requested rows were within the [file reading coverage](/chat/files). For a problem with the answer itself, use **Give feedback** on that answer. Feedback records the issue; ask Scout separately if you want a revised analysis.
+
+See [Agent trace and Show logic](/chat/ask-questions/agent-trace-and-logic) to review Scout's work, or [Give feedback on answers](/chat/ask-questions/give-feedback) to report the issue.
+
+## Scout stops or shows an error
+
+Check whether Scout is waiting for an answer to a question or an approval. Respond to that card if you want the work to continue.
+
+If you left the conversation, reopen it from **Recents** or **Pinned**. Check the current run and saved messages before submitting the same request again. [Leaving and returning](/chat/ask-questions#leave-and-return-while-scout-works) within Galvant does not itself cancel the server's work.
+
+If the run shows a failure, keep the exact error text. Ask Scout to continue from the failed step in the same conversation, with any missing information it requested. If it repeatedly fails at the same point, include that context when reporting the problem.
+
+<Info>
+  **Screenshot placeholder: HELP-01**
+
+  Show a conversation with a visible run error, keeping the preceding request and error text readable. Use a controlled example with no private data.
+</Info>
+
+## Dictation does not work
+
+Use the message shown beside the recorder to decide what to check:
+
+| Message or symptom | What to do |
+| --- | --- |
+| Microphone access was denied | Allow microphone access in your browser's site permissions, then try again. |
+| No microphone was found | Connect or select an available microphone. |
+| The microphone could not be opened | Check whether another application is using it. |
+| The microphone disconnected or recording was interrupted | Reconnect it and record the question again. |
+| The recording exceeded 20 MB | Record a shorter question. Recordings also have a 10-minute duration limit. |
+| Transcription failed and **Retry** is available | Click **Retry**, then review the returned text before sending. |
+| The browser does not support recording | Use a browser with microphone recording support on HTTPS. |
+
+Use **Discard recording** if you want to remove the recording and start again. If a message says the recording could not be saved, retry or discard it before leaving the page.
+
+See [Dictate a message](/chat/ask-questions#dictate-a-message) for the normal recording sequence.
+
+## A file cannot be uploaded or fully read
+
+Check that the file matches one of the formats on [Work with files](/chat/files) and is within the 50 MB upload limit.
+
+Uploading successfully does not mean every row enters Scout's reading context. Excel coverage is the first 1,000 rows per sheet, and long content can be cut off earlier. CSV and TSV reading also has a 1,000-row limit. Ask Scout to state which sheets and rows it actually read before relying on a whole-file total.
+
+If the needed data is outside that coverage, prepare a smaller file containing the relevant records and attach it. Re-reading the same original file with a narrower question does not remove its reading limits.
+
+## A dashboard or card is unavailable
+
+- Confirm that you are signed in to the intended company account.
+- If the dashboard was shared with you, ask the owner to check its saved audience and your entry under **People with access**.
+- If access shows **Access unavailable**, ask your Galvant administrator to check your account's Dashboards access.
+- If the dashboard opens but a card fails, keep the card's error and check its variables and **Show logic**.
+
+A copied dashboard link does not grant access. See [Share dashboards](/dashboards/sharing) for owner and viewer permissions.
+
+<Info>
+  **Screenshot placeholder: HELP-02**
+
+  Show one failed card with its title, current variable pills, error, and refresh control. Keep other successful cards visible to distinguish a card failure from an unavailable dashboard.
+</Info>
+
+## Changes are waiting for approval
+
+Dash's proposed changes are not saved until approved. Review the pending change list, then click **Approve all**, request a revision, or choose **Discard**. While a proposal is pending, some direct editing controls are unavailable.
+
+Scout's workflow changes use a different approval card. Choose **Yes** to allow the proposed action or **No** to decline it. A written response requests a change; it does not approve the action.
+
+If the item changed while you were reviewing it, ask the agent to produce an updated proposal against its current state before approving again.
+
+See [dashboard proposal review](/dashboards/use-dash#review-and-approve-changes) and [workflow approval](/chat/workflows#review-and-approve-changes).
+
+## Data does not look current
+
+Check the selected date range and other variables first. A fixed date range remains fixed; a relative range moves over time. Also check whether the card actually uses the variable you changed.
+
+Click **Refresh** in the dashboard header and wait for it to finish. A failed refresh can leave a previous result visible, so check for an accompanying error before using it. See [Arrange and refresh your dashboard](/dashboards/use-dash#arrange-and-refresh-your-dashboard).
+
+Refreshing runs the analysis against the data available to Galvant. If the source data itself has not been updated, ask your administrator or Galvant contact to check its availability.
+
+For an old file attachment, upload the revised file and identify it in your next question. Refreshing a result does not replace the original attachment.
+
+## An export or scheduled email fails
+
+1. Check whether the failure concerns the whole export or one card. A workbook can contain successful sheets alongside failed or truncated results.
+2. For a recurring email, open **Schedule email** > **Scheduled sends**, select your schedule, and read **Last email failed** when present.
+3. Check the recipients, recurrence, timezone, and the dashboard's current variables.
+4. If a variable choice is no longer valid, choose valid values on the dashboard and click **Save schedule**. This captures all current variable selections again.
+
+**Dashboard email queued** confirms that a send was queued. Check **Scheduled sends** for a failed-delivery indicator rather than treating that message as proof of delivery.
+
+If a report is still missing, keep the send time, timezone, dashboard, recipient addresses, and exact error for your Galvant contact. See [Export and email reports](/dashboards/reports) for the setup and coverage details.
+
+<Info>
+  **Screenshot placeholder: HELP-03**
+
+  Show a schedule's Last email failed message and the corresponding Delivery failed calendar entry. Capture the error and occurrence time clearly.
+</Info>
+
+## Report a problem
+
+For an answer-specific issue, use **Give feedback** on the affected answer. For an access, recording, dashboard, or delivery issue, share these details with your Galvant contact:
+
+- The conversation or dashboard link and the action you were trying to complete.
+- The approximate time and your timezone.
+- The exact error text and a screenshot of the relevant state.
+- What you expected and what happened instead.
+- The selected dashboard variables or attached file name, when relevant.
+
+Keep the original conversation or dashboard available so the issue can be investigated in context.

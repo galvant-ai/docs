@@ -1,0 +1,100 @@
+---
+title: "Numbers and gauges"
+description: "Track a key metric, compare it with an earlier period or target, and use a gauge to show performance against a meaningful range of colored zones."
+keywords: ["number cards", "gauges", "period comparison", "targets", "zones"]
+sidebarTitle: "Numbers and gauges"
+---
+
+Dash can give an important measure its own number card or show it against a range as a gauge. Describe the measure you want to follow; you can also request either format explicitly.
+
+Use a dashboard you own for the editing steps below. On a shared dashboard, **Duplicate and edit** creates your own editable copy.
+
+## Track a key metric
+
+For example, on a sales dashboard, ask:
+
+<Prompt description="Show total sales for the selected reporting period as a number, with a comparison to the previous period.">
+  Show total sales for the selected reporting period as a number, with a comparison to the previous period.
+</Prompt>
+
+On a card you can edit, hover over its header and click **Edit number**, the sliders button. Adjust its **Label** and **Format**, including currency, percentages, and decimal places. These menu changes save directly.
+
+<Info>
+  **Screenshot placeholder: METRIC-01**
+
+  Show a total-sales number card beside Edit number, with its Label and Format controls visible. Keep the reporting period in view.
+</Info>
+
+## Compare periods or a target
+
+Open **Edit number** and use **Compare to**:
+
+<Tabs>
+  <Tab title="An earlier period">
+    Choose **Previous period** or **Same period last year**. Read the dates above both values to see exactly what is being compared.
+
+    Changing the dashboard's reporting period updates both date ranges together.
+
+    <Info>
+      **GIF placeholder: METRIC-02**
+
+      Show a sales number with Previous period enabled. Change the reporting-period variable and show both sets of dates and values updating together.
+    </Info>
+
+    Period comparisons need the card to use exactly one date-range variable. If the options are unavailable, ask Dash to connect the card to the intended [reporting period](/dashboards/variables#choose-a-reporting-period). These period options are unavailable on Chat cards.
+  </Tab>
+  <Tab title="A target">
+    Choose **Target** and enter the agreed target in the **Target** field. The card shows the target beside the actual result and the difference between them.
+
+    <Info>
+      **Screenshot placeholder: METRIC-05**
+
+      Show a number card comparing an actual result with an entered target. Keep the Target field, both values, and the difference visible.
+    </Info>
+  </Tab>
+</Tabs>
+
+For number and currency metrics, **Show change as** offers **Percent**, **Amount**, or **Both**. Percentage metrics show the difference in percentage points: moving from 30% to 33% is 3 percentage points.
+
+Set **An increase is** to **Good (green)** for measures where higher is better, or **Bad (red)** for measures such as costs or overdue work where lower is better.
+
+<Info>
+  **Screenshot placeholder: METRIC-03**
+
+  Show an overdue-work metric with Bad (red) selected and a decrease displayed as a favorable change.
+</Info>
+
+## Show performance against a range
+
+A gauge places the current value within colored zones. For example, select an existing completion-rate card with **Ask Dash about this card**, then ask:
+
+<Prompt description="Show this completion rate as a gauge from 0% to 100%, with red below 70%, yellow from 70% to 90%, and green from 90% to 100%.">
+  Show this completion rate as a gauge from 0% to 100%, with red below 70%, yellow from 70% to 90%, and green from 90% to 100%.
+</Prompt>
+
+Review and approve the proposed gauge. Use thresholds that match what your team considers low, acceptable, and good performance.
+
+<Info>
+  **GIF placeholder: METRIC-04**
+
+  Request the completion-rate gauge and approve it. Show its numeric value, needle, and the three defined zones together.
+</Info>
+
+<AccordionGroup>
+  <Accordion title="Adjust a gauge's range and zones">
+    On an owned dashboard, open **Edit gauge**. Under **Zones**, open the first zone to set **Starts at**, then set each zone's **Ends at** and **Color**. The last zone's end sets the maximum. Use **Add zone** or a zone's remove control to change the number of zones.
+
+    Enter boundaries in the measure's underlying units. Percentage values are fractions: 0.7 is 70%, 0.9 is 90%, and 1 is 100%. Each zone must end above its start.
+
+    <Info>
+      **Screenshot placeholder: METRIC-06**
+
+      Show Edit gauge with the first zone open and a 0.7 boundary displayed as 70% on the gauge. Include Starts at, Ends at, and Color.
+    </Info>
+  </Accordion>
+  <Accordion title="Read values outside the expected range">
+    A gauge's needle stays within the dial even when the actual value exceeds its range. Read the displayed number as well as the needle. For a number comparison whose earlier value is zero, an ordinary percentage change is unavailable, so the card shows the amount of change.
+  </Accordion>
+</AccordionGroup>
+
+For other visualizations Dash can create, see [Chart cards](/dashboards/cards/charts).

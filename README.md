@@ -1,55 +1,36 @@
-# Mintlify Starter Kit
+# Galvant documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+Customer documentation for Galvant Chat and Dashboards, built with Mintlify. The site starts at `index.mdx`; navigation and branding live in `docs.json`.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Preview locally
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
-
-## AI-assisted writing
-
-Set up your AI coding tool to work with Mintlify:
+With the Mintlify CLI installed, run this from the repository root:
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Use the local address printed by the command. See the [current Mintlify documentation](https://www.mintlify.com/docs) for installation and preview options.
 
-## Publishing changes
+## Review the content
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+- `drafts/documentation-skeleton.md`: agreed page structure and editorial decisions.
+- `drafts/page-reviews.md`: source and editorial reviews, including the split into the current 17 pages.
+- `drafts/media-checklist.md`: all 90 screenshot, GIF, and video placeholders with capture briefs and replacement instructions.
+- `.mintlify/product-brief.md`: audience, scope, and terminology for future authoring.
 
-## Need help?
+These authoring files are excluded from the published documentation through `.mintignore`. Visual placeholders are intentionally visible on the customer pages until their assets are supplied.
 
-### Troubleshooting
+The first draft was checked against the app repository. Confirm exact controls and example results in the deployed app while capturing media. Keep each page's instructions usable without its video.
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+## Validate changes
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+```bash
+mint validate --no-build --format json --telemetry false
+mint broken-links --check-anchors --telemetry false
+mint validate --format json --telemetry false
+```
+
+Use Mintlify's built-in components. Check the [latest Mintlify documentation](https://www.mintlify.com/docs) before changing component or navigation syntax. Add new customer pages to `docs.json`; keep draft planning and internal source evidence in `drafts/`. Keep sidebar labels descriptive.
+
+Give each page its own frontmatter `description` for SEO. The approved rule in `styles.css` hides the page-header subtitle while preserving the description metadata. Check that selector against the rendered header when changing the theme. Do not add other custom CSS or components without discussing them first.

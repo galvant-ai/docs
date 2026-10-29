@@ -1,0 +1,44 @@
+---
+title: "Agent trace and Show logic"
+description: "Follow Scout's work in the agent trace and open Show logic to understand its thought process, the steps it took, and the sources behind an answer."
+keywords: ["Scout", "agent trace", "tool calls", "SQL", "Show logic", "Tables used"]
+sidebarTitle: "Agent trace and Show logic"
+---
+
+Scout's agent trace shows its work as a request runs. **Show logic** explains the thought process and steps Scout took to reach its answer.
+
+<Info>
+  **Screenshot placeholder: RESULTS-01**
+
+  Show Worked for above a completed answer and Show logic below it. Include a result card with its own Show logic control, keeping the original question visible.
+</Info>
+
+## Open the agent trace
+
+The trace includes data searches, table inspections, queries, and tool results. The steps depend on the request.
+
+While Scout is working, the trace opens under **Working**. Once the final answer starts, it collapses under **Worked for** followed by the elapsed time. Click that control to reopen it.
+
+Expand a tool call to inspect its available details. For example, a **Queried database** step can show the **SQL** and the number of **Rows** returned. Tool calls without additional details do not have an expandable detail view.
+
+<Info>
+  **GIF placeholder: RESULTS-07**
+
+  Record Scout working, then open Worked for above the completed answer. Expand a Queried database step and show its SQL and Rows details. Keep the trace distinct from the final answer and Show logic.
+</Info>
+
+## See how Scout reached an answer
+
+Click **Show logic** beneath the answer to follow Scout's thought process and the steps that led to the result. For answers using connected data, **Tables used** identifies the sources involved.
+
+If Scout builds on an earlier result in the conversation, Show logic can refer back to that work.
+
+Result cards also have **Show logic** in their headers. Hover over the card header to reveal its controls, then open **Show logic** to see the steps behind that table or chart.
+
+<Info>
+  **Screenshot placeholder: RESULTS-02**
+
+  Capture Show logic expanded beneath an answer, with Scout's narrative steps and Tables used. Include the separate Show logic control in a result card's header.
+</Info>
+
+For interacting with the results themselves, see [Use tables and charts](/chat/ask-questions/tables-and-charts). To report an issue with an answer, see [Give feedback on answers](/chat/ask-questions/give-feedback).
