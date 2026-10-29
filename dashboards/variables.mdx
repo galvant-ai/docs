@@ -1,0 +1,151 @@
+---
+title: "Use dashboard variables"
+description: "Change dates and other inputs across your dashboard. See affected cards, add variables with Dash, and understand defaults, linked choices, and shared views."
+keywords: ["dashboard variables", "Dynamic", "Static", "date range", "defaults", "linked choices"]
+sidebarTitle: "Use dashboard variables"
+---
+
+Use dashboard variables to switch the period, customer, location, or other inputs your dashboard shows. One selection can update several cards at once.
+
+## Change what your dashboard shows
+
+Find **Dashboard variables** above the cards. Open a choice, such as a customer or location, and select a value. The cards that use it update for that selection. You can do this on dashboards you own and dashboards shared with you.
+
+For example, select a customer to see their sales total, trend, and orders together. A card that does not use that customer variable keeps its own scope.
+
+<Info>
+  **GIF placeholder: VAR-01**
+
+  Select one customer in the variable bar. Show the sales total, trend, and order table updating together, with a company-wide card unchanged. Keep the selected customer visible.
+</Info>
+
+A table's column filter narrows the rows in that table. A dashboard variable changes the input used by every card connected to it.
+
+## Choose a reporting period
+
+Open the date-range variable in **Dashboard variables**. Use **Dynamic** for a period that moves over time or **Static** for fixed dates.
+
+<Tabs>
+  <Tab title="Dynamic">
+    Choose a preset such as **Last 30 days**. The selection takes effect when you click it.
+
+    For a custom period, use **Customized**. To see the last three complete months:
+
+    1. Set **Last** to **3** and the unit to **months**.
+    2. Select **Complete periods only** to exclude the current partial month.
+    3. Click **Apply**.
+
+    <Info>
+      **GIF placeholder: VAR-03**
+
+      Open Dynamic and set Last 3 Months with Complete periods only. Click Apply and show the resulting date label and updated cards.
+    </Info>
+  </Tab>
+  <Tab title="Static">
+    Enter **Start** and **End**, or select a range on the calendar, then click **Apply**. This selects fixed calendar dates; the range does not move forward with time.
+
+    <Info>
+      **Screenshot placeholder: VAR-08**
+
+      Show Static with Start and End filled in, the matching calendar range, and Apply visible.
+    </Info>
+  </Tab>
+</Tabs>
+
+## See which cards use a variable
+
+Click the card count beside a variable's name, such as **3 cards**. The **Used by these cards** list shows its connected cards. Select a card in that list to jump to it.
+
+Cards also show their current variable values beneath their titles. Use these labels to check the scope of a result.
+
+<Info>
+  **Screenshot placeholder: VAR-04**
+
+  Open a variable's 3 cards menu beside its name. Show Used by these cards and the matching variable values below a card title.
+</Info>
+
+## Ask Dash to add or change variables
+
+On a dashboard you own, tell Dash what you want to control. For example, on a sales dashboard:
+
+<Prompt description="Let me change the reporting period for the sales total, sales trend, and orders table together. Use a date-range variable and default it to the last 30 days.">
+  Let me change the reporting period for the sales total, sales trend, and orders table together. Use a date-range variable and default it to the last 30 days.
+</Prompt>
+
+Review the proposed variable and its connected cards, then click **Approve all**. You can try the proposed values before approving.
+
+Use the same approach to change a variable's default, connect another card, or remove a variable you no longer need.
+
+<Info>
+  **Screenshot placeholder: VAR-02**
+
+  Show Dash proposing a Reporting period variable for the named sales cards. Keep the proposed variable, connected cards, and Approve all visible.
+</Info>
+
+## Current selections and saved defaults
+
+<Columns cols={2}>
+  <Card title="Your current view" icon="sliders">
+    Changing a variable updates the view you are exploring. It does not replace the saved default for everyone opening the dashboard.
+  </Card>
+  <Card title="The saved starting view" icon="bookmark">
+    Ask Dash to change the default when you want the dashboard to start with a different selection. Review and approve that change.
+  </Card>
+</Columns>
+
+The browser address keeps the values you changed from the saved defaults. When someone opens that address, those choices are applied. Inputs you did not change use the saved defaults in effect when the link is opened.
+
+For example, a link with a selected customer can still use a newly saved default reporting period. Dynamic periods move with time, and refreshed results can change as the connected data changes.
+
+## Linked variables and shared views
+
+### Choices that depend on each other
+
+A selection can narrow another variable's choices. For example, choosing a company can limit the available locations. Follow the linked control to choose the company and then its location. Changing a parent selection resets dependent values to their defaults.
+
+<Info>
+  **GIF placeholder: VAR-05**
+
+  Use a linked Company and Location control. Select a company and location, then change the company to show how the available locations and dependent selection change.
+</Info>
+
+### Share or report on your selected view
+
+| When you… | The view used is… |
+| --- | --- |
+| Copy the browser address | The selections you changed, with saved defaults for the remaining inputs. |
+| Use **Copy link** in Share | The dashboard's saved defaults. |
+| Download Excel or send an email now | Your current variable selections. |
+| Create or save an email schedule | The selections saved with that schedule. |
+
+A schedule keeps those selections until you save it again. Dynamic dates move with each send in the schedule's timezone; static dates stay fixed. See [Export and email reports](/dashboards/reports#which-dates-and-variable-values-are-used).
+
+<AccordionGroup>
+  <Accordion title="Text, number, and multiple-choice inputs">
+    For text or number inputs, enter a value and press **Enter** or click outside the field to apply it. For multiple choices, select the values you want. Where **All** is available, it includes all choices within that variable's scope.
+
+    <Info>
+      **Screenshot placeholder: VAR-09**
+
+      Show a multiple-choice variable with two values selected and its search field visible. Keep the affected cards in view.
+    </Info>
+  </Accordion>
+  <Accordion title="Show the selected value in a title">
+    Ask Dash to make a dashboard name, card title, or column label use a variable value. For example: “Include the reporting period in the sales trend title, and update it when the period changes.”
+
+    <Info>
+      **GIF placeholder: VAR-06**
+
+      Change the reporting period and show a configured sales-trend title updating to match it.
+    </Info>
+  </Accordion>
+  <Accordion title="Rename or reorder variables">
+    On a dashboard you own, use a variable's name control to rename it. Move it with its drag handle to change its position in the bar. Linked variables move as a group.
+
+    <Info>
+      **GIF placeholder: VAR-07**
+
+      Move one variable to a new position in the bar. Keep its name and connected-card count visible so it can be followed through the move.
+    </Info>
+  </Accordion>
+</AccordionGroup>

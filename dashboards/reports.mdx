@@ -1,0 +1,148 @@
+---
+title: "Export and email reports"
+description: "Download an Excel report, email it now, or schedule recurring delivery. Manage schedules and understand which dashboard dates and selections each report uses."
+keywords: ["Excel export", "email reports", "scheduled sends", "recurrence", "timezone"]
+sidebarTitle: "Export and email reports"
+---
+
+Take dashboard results with you as an Excel report. Download one, send it now, or schedule recurring delivery. Start by selecting the dashboard period and other variables you want the report to use.
+
+<Columns cols={3}>
+  <Card title="Download" icon="file-excel" href="/dashboards/reports#download-excel">
+    Save a workbook to your computer.
+  </Card>
+  <Card title="Send now" icon="envelope" href="/dashboards/reports#send-a-report-now">
+    Email a report once.
+  </Card>
+  <Card title="Schedule" icon="calendar" href="/dashboards/reports#schedule-recurring-emails">
+    Receive reports on a recurring schedule.
+  </Card>
+</Columns>
+
+## Download Excel
+
+Open the dashboard and click **Download Excel** in its header. Wait for the download to finish, then open the workbook to see its results and visualizations.
+
+<Info>
+  **GIF placeholder: REPORT-01**
+
+  Download a multi-card dashboard and open its workbook. Show the dashboard overview and one card's worksheet.
+</Info>
+
+## Send a report now
+
+<Steps>
+  <Step title="Open Send now">
+    Click **Schedule email** in the dashboard header, then choose **Send now**.
+  </Step>
+  <Step title="Address the report">
+    Review **Recipients** and remove any addresses you do not want. Add the intended addresses, pressing **Enter** after each one. Review the **Subject** and **Message**.
+  </Step>
+  <Step title="Send">
+    Check the recipients and click **Send now**. **Dashboard email queued** confirms the request was accepted for processing. Delivery happens afterward.
+  </Step>
+</Steps>
+
+Recipients receive the Excel file. They need [dashboard access](/dashboards/sharing) to open a live dashboard link included in the message.
+
+<Info>
+  **Screenshot placeholder: REPORT-03**
+
+  Show the Send now form ready to send, with sample recipients, subject, message, and the Send now button. Do not send an email just to capture the form.
+</Info>
+
+## Schedule recurring emails
+
+<Steps>
+  <Step title="Create a new schedule">
+    Click **Schedule email** > **Scheduled sends** > **New schedule**.
+  </Step>
+  <Step title="Choose recipients and timing">
+    Review the **Recipients**, **Subject**, and **Message**. Set **Start**, **Repeat**, and **Every**. Where **On** is shown, choose the days or pattern. Set **Time** and **Timezone**.
+
+    For example, a weekly team report can run every Monday at 09:00 in your team's timezone.
+  </Step>
+  <Step title="Check and save">
+    Read the **Occurs** summary and check the dashboard's selected variables. Click **Create schedule**. The saved schedule appears in the list.
+  </Step>
+</Steps>
+
+You can create your own schedules for dashboards you own or can view through sharing.
+
+<Info>
+  **Video placeholder: REPORT-04**
+
+  Create one weekly schedule. Show the recipients, timing, timezone, Occurs summary, and saved entry in the list. Use a controlled capture account and end before delivery.
+</Info>
+
+## Change or stop a schedule
+
+Open **Schedule email** > **Scheduled sends** and select one of your schedules. Change its recipients, message, or timing, then click **Save schedule**.
+
+<Note>
+  **Saving also replaces the schedule's variable selections with those currently selected on the dashboard.** Check the dashboard view before saving, even when you only want to edit the message.
+</Note>
+
+To stop future sends, select the schedule and click **Delete**. To finish on a particular date, set **End** to **On this day** and choose the end date instead.
+
+<Info>
+  **Screenshot placeholder: REPORT-05**
+
+  Show one selected schedule with Save schedule and Delete visible. Keep its recipients and timing readable.
+</Info>
+
+## Which dates and variable values are used
+
+<Columns cols={2}>
+  <Card title="Download or send now" icon="sliders">
+    The report uses the variable selections on the open dashboard.
+  </Card>
+  <Card title="Scheduled report" icon="calendar">
+    The report uses the selections captured when you create or save that schedule.
+  </Card>
+</Columns>
+
+For scheduled dates:
+
+- **Dynamic** periods, such as Last 30 days, move with each send date in the schedule's timezone.
+- **Static** dates stay fixed for every send.
+
+Changing your open dashboard later does not update a saved schedule. Each scheduled report is generated at send time using the dashboard and the sender's available access.
+
+A table's temporary search, sort, or column filters do not define the exported data. Use [dashboard variables](/dashboards/variables) for the report's selected scope.
+
+## Check scheduled sends and delivery
+
+Click **Scheduled sends** in the Dashboards sidebar to open the calendar. Use **Month** or **Week** to see upcoming occurrences and past sends. The legend distinguishes **You send** from **Sent to you**.
+
+<Info>
+  **Screenshot placeholder: REPORT-06**
+
+  Show a weekly report on the Scheduled sends calendar with its date, time, and You send/Sent to you legend readable.
+</Info>
+
+If a delivery fails, the calendar shows **Delivery failed**. Your schedule's settings show **Last email failed** with its latest error. See [email troubleshooting](/help/troubleshooting#an-export-or-scheduled-email-fails) for the next steps.
+
+<AccordionGroup>
+  <Accordion title="More scheduling options">
+    **Repeat** supports Daily, Weekly, Monthly, and Yearly. **Every** sets the interval, such as every two weeks. **On** offers weekdays or the monthly/yearly pattern associated with your start date. **End** can keep the schedule running or stop it on a date.
+
+    A schedule belongs to its creator. Having access to a dashboard does not let you edit someone else's schedules.
+  </Accordion>
+  <Accordion title="Email options">
+    You can add up to 25 recipients. **Include export time** adds the generation time to the message. Use **Copy dashboard link** to include the live view alongside the report.
+  </Accordion>
+  <Accordion title="Workbook contents and coverage">
+    A multi-card export includes a Dashboard overview, card worksheets, and an Export Summary. A one-card dashboard exports on one worksheet.
+
+    Each data worksheet has a 1,000,000-cell limit. Check the summary or affected worksheet for truncated results and card errors; some cards can succeed while another fails. Emailed reports also identify those issues.
+
+    <Info>
+      **Screenshot placeholder: REPORT-02**
+
+      Show an Export Summary identifying one truncated or failed card. Highlight its Status, Truncated, and Error fields.
+    </Info>
+
+    Excel contains a snapshot rather than live variable controls. Gauges export their value with the zone's color.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,155 @@
+---
+title: "Work with files"
+description: "Ask Scout about spreadsheets, PDFs, images, and STEP models. Attach files, explore formulas and document details, and understand file reading limits."
+keywords: ["attachments", "Excel", "CSV", "PDF", "images", "STEP", "file limits"]
+sidebarTitle: "Work with files"
+---
+
+Attach a file and ask Scout about what is inside it. Follow the formulas in a workbook, pull requirements from a PDF, understand a drawing, or examine a CAD model.
+
+<Columns cols={2}>
+  <Card title="Spreadsheets" icon="table" href="/chat/files#spreadsheets">
+    Trace formulas, understand a model, or explore rows in Excel, CSV, and TSV files.
+  </Card>
+  <Card title="PDFs" icon="file-pdf" href="/chat/files#pdfs">
+    Ask about reports, specifications, tables, and drawings in a document.
+  </Card>
+  <Card title="Images" icon="image" href="/chat/files#images">
+    Read annotations and explore visible details in an image or diagram.
+  </Card>
+  <Card title="CAD models" icon="cube" href="/chat/files#cad-models">
+    Examine the geometry and features of a STEP model.
+  </Card>
+</Columns>
+
+## Attach a file and ask about it
+
+<Steps>
+  <Step title="Attach your file">
+    Click **Add file**, the paperclip in the message box, and choose a file. Wait for the upload to finish.
+  </Step>
+  <Step title="Ask your question">
+    Tell Scout what you want to understand. Name the sheet, page, or feature when you want it to focus on a particular part.
+  </Step>
+  <Step title="Send the message">
+    Check that the attachment appears beside your draft, then send. If you attached several files, use their names to make your question clear.
+  </Step>
+</Steps>
+
+Each file can be up to **50 MB**. To remove an attachment before sending, click its X in the attachment tray.
+
+<Info>
+  **GIF placeholder: FILES-01**
+
+  Show Add file, a completed upload, and a focused question sent with the attachment. End on Scout's answer with the filename still visible.
+</Info>
+
+## Spreadsheets
+
+**Formats:** Excel (`.xlsx`), CSV (`.csv`), and TSV (`.tsv`).
+
+Ask Scout to explain how a workbook works: which cells supply a total, how sheets connect, and what assumptions are built into its formulas. For CSV and TSV files, ask about the columns and records you want to examine.
+
+For example, to review a total in `Costing!F20`, ask the question below. Replace the sheet name and cell with the ones you want to examine in your workbook.
+
+<Prompt description="Explain the total in cell F20 on the Costing sheet. Trace its formula to the input cells, including references to other sheets. Identify any inputs you could not read.">
+  Explain the total in cell F20 on the Costing sheet. Trace its formula to the input cells, including references to other sheets. Identify any inputs you could not read.
+</Prompt>
+
+<Note>
+  Scout reads up to the first **1,000 rows per Excel sheet** and the first **1,000 rows of a CSV or TSV**. Long content can be cut off earlier. Formulas are read as written, rather than recalculated.
+</Note>
+
+If the records you need are outside that coverage, attach a smaller file containing those records. For formula questions, keep the formulas and their referenced input cells together. Asking a narrower question does not expand the reading limit.
+
+<Info>
+  **Screenshot placeholder: FILES-02**
+
+  Show a small costing workbook with its total in Costing!F20, then Scout tracing that formula to its input cells and any referenced sheets. Keep the formula and its inputs within the documented reading coverage and visible in the capture.
+</Info>
+
+## PDFs
+
+**Format:** `.pdf`.
+
+Bring a report, specification, or drawing and ask about the parts that matter to your task. You can name a page, table, or section to focus the review.
+
+<Prompt description="Summarize the key requirements in this document and point me to the relevant pages.">
+  Summarize the key requirements in this document and point me to the relevant pages.
+</Prompt>
+
+<Info>
+  **Screenshot placeholder: FILES-03**
+
+  Show a PDF question and Scout's answer referring to a specific page, table, or requirement. Include the relevant part of the document in the capture.
+</Info>
+
+## Images
+
+**Formats:** `.png`, `.jpg`, `.jpeg`, `.gif`, and `.webp`.
+
+Ask Scout about visible features, text, or annotations. For example: “Explain the annotations in this drawing and identify anything that is hard to read.”
+
+<Info>
+  **Screenshot placeholder: FILES-07**
+
+  Show an image or diagram attached to a question and an answer about its visible annotations. Keep the referenced details readable in the original image.
+</Info>
+
+## CAD models
+
+**Formats:** STEP (`.step` and `.stp`).
+
+Ask Scout to describe a part's geometry or focus on a particular feature. It uses the geometry and prepared views of the model to examine it.
+
+<Prompt description="Describe the main geometric features of this part.">
+  Describe the main geometric features of this part.
+</Prompt>
+
+<Info>
+  **Screenshot placeholder: FILES-04**
+
+  Show a STEP attachment and an answer about the part's geometry. Include prepared views if they appear in the product flow.
+</Info>
+
+## Keep working with a file
+
+Continue in the same conversation when you want Scout to take a closer look. Refer to the filename, sheet, page, or feature in your follow-up. Scout can revisit the attachment with that focus; spreadsheet reading limits still apply.
+
+<Info>
+  **GIF placeholder: FILES-05**
+
+  Ask an initial file question, then follow up about one sheet, page, or feature in the same conversation. Show how the follow-up builds on the earlier answer.
+</Info>
+
+<AccordionGroup>
+  <Accordion title="Can I use the file in a new chat?">
+    Attach it to the new chat. Files belong to the conversation where you uploaded them and do not automatically carry over.
+  </Accordion>
+  <Accordion title="How do I use an updated version?">
+    Attach the revised file and tell Scout which version to use.
+  </Accordion>
+  <Accordion title="Can an attachment supply data to a dashboard?">
+    Attachments are reference material for the conversation. They do not become connected database tables or inputs for dashboard refreshes.
+  </Accordion>
+</AccordionGroup>
+
+Click an uploaded filename on a sent message to download the original file.
+
+<Info>
+  **Screenshot placeholder: FILES-06**
+
+  Show a sent message's attachment filename and its download interaction.
+</Info>
+
+## Download files Scout creates
+
+When Scout produces a file during a request or workflow, use its file tile in the answer to open or download it.
+
+<Info>
+  **Screenshot placeholder: RESULTS-05**
+
+  Show a file tile produced by a verified workflow, with its filename and open/download action visible.
+</Info>
+
+For table downloads, see [Download a table as Excel](/chat/ask-questions/tables-and-charts#download-a-table-as-excel). For upload errors, see [Troubleshooting](/help/troubleshooting#a-file-cannot-be-uploaded-or-fully-read).

@@ -1,0 +1,127 @@
+---
+title: "Chart cards"
+description: "Explore charts Dash can create, combine measures, compare shares, and add targets or trends. See practical examples and adjust a chart's presentation."
+keywords: ["charts", "series", "dual axes", "stacked bars", "goal lines", "trend lines"]
+sidebarTitle: "Chart cards"
+---
+
+Describe the information you want to see, and Dash can turn it into a chart. You can also request a particular visualization or change one already on your dashboard.
+
+## Examples of charts Dash can create
+
+<Columns cols={2}>
+  <Card title="Line charts" icon="chart-line">
+    A sales trend across months, showing how the measure changes over time.
+  </Card>
+  <Card title="Bar charts" icon="chart-column">
+    Sales by product, with categories side by side for comparison.
+  </Card>
+  <Card title="Pie and donut charts" icon="chart-pie">
+    Each product group's share of total sales.
+  </Card>
+  <Card title="Combined charts" icon="chart-simple">
+    Sales amounts and a margin percentage together, with separate axes for their units.
+  </Card>
+</Columns>
+
+<Info>
+  **Screenshot placeholder: CHART-01**
+
+  Show labeled examples of a line, bar, pie, and donut chart using one sales dataset. Keep titles and units readable. The combined chart has its own capture below.
+</Info>
+
+On a dashboard you own, hover over a line or bar chart's header and click **Edit chart**, the sliders button, to change its presentation. Ask Dash to change the measures or grouping, or to change a pie or donut chart. Shared-dashboard viewers can explore the chart; use an owned copy to save edits.
+
+## Combine measures in one chart
+
+For example, ask Dash to show monthly sales beside gross margin, when those measures are available in your data:
+
+<Prompt description="Show monthly sales as bars on the left axis and gross margin percentage as a line on the right axis. Label both axes with their units.">
+  Show monthly sales as bars on the left axis and gross margin percentage as a line on the right axis. Label both axes with their units.
+</Prompt>
+
+Review the proposed chart and approve it. Read the sales bars against the currency axis and the margin line against the percentage axis.
+
+<Info>
+  **Screenshot placeholder: CHART-02**
+
+  Show monthly sales as bars and gross margin percentage as a line. Mark the left currency axis, right percentage axis, and matching legend entries.
+</Info>
+
+To change how an existing measure is drawn, open **Edit chart** > **Series**, select the measure, and choose **Show as** > **Bar** or **Line**. A series is one measure drawn across the chart.
+
+## Show components and proportions
+
+Ask Dash for a breakdown when you want to see the parts of a total. For example: “Show monthly sales broken down by product group.”
+
+On a chart containing bars, open **Edit chart** > **Bars**:
+
+| Display | What you see |
+| --- | --- |
+| **Side by side** | Product-group amounts beside each other. |
+| **Stacked** | The product-group amounts combined into each month's total. |
+| **Stacked to 100%** | Each group's share of that month's total. |
+
+<Info>
+  **GIF placeholder: CHART-03**
+
+  Switch one monthly product-group chart from Stacked to Stacked to 100%. Show how the axis and interpretation change from amounts to shares.
+</Info>
+
+Stack measures that make up the same total and use the same units. Dash can prepare the breakdown for you.
+
+## Add targets and trends
+
+<Tabs>
+  <Tab title="Show a target">
+    To compare monthly sales with an agreed target:
+
+    1. Open **Edit chart** > **Goal lines** > **Add goal line**.
+    2. Enter the target **Value** and a **Label**, such as “Monthly target.”
+    3. On a chart with two axes, select the sales axis.
+    4. Choose its color and click **Add goal line**.
+
+    <Info>
+      **GIF placeholder: CHART-06**
+
+      Add one Monthly target goal line to the sales axis. End with its label and the monthly results visible.
+    </Info>
+  </Tab>
+  <Tab title="Show the overall trend">
+    Open **Edit chart** > **Series**, select a measure, and turn on **Trend line**. The fitted line summarizes the direction of the plotted points. It is not a forecast.
+
+    <Info>
+      **GIF placeholder: CHART-07**
+
+      Enable a trend line for monthly sales. Show the original points and fitted line together.
+    </Info>
+  </Tab>
+</Tabs>
+
+## Adjust labels, colors, and axes
+
+In **Edit chart** > **Series**, select a measure to change its **Name**, **Color**, or **Data labels**. Use **Legend** to change where the legend appears.
+
+<Info>
+  **GIF placeholder: CHART-05**
+
+  Give one series a clearer name and color. End with its matching legend entry and plotted values visible.
+</Info>
+
+Set the **Title** under **X axis** and **Y axis**, or **Left axis** and **Right axis**. Numeric-axis menus also offer **Format**. Label both axes when a chart combines different units.
+
+<Info>
+  **Screenshot placeholder: CHART-04**
+
+  Show the right-axis menu on the combined sales/margin chart, with a clear percentage title and Percent format. Keep the resulting axis in view.
+</Info>
+
+These menu changes save directly when you can edit the chart. They are also available on editable line and bar cards in Chat.
+
+<Accordion title="Additional presentation options">
+  **Series** also contains line styles, points, curves, and area shading. Axis menus offer text sizes and **Limits** > **Auto** or **Manual**. Use a manual range carefully, because values outside it may be hidden.
+
+  Line and bar charts support up to 10 series across both axes and up to five goal lines. You can edit an existing goal line with **Save goal line** or remove it with **Delete**.
+</Accordion>
+
+To investigate a point or slice, see [Explore a result with Dash](/dashboards/use-dash#explore-a-result-with-dash).

@@ -1,0 +1,170 @@
+---
+title: "Build and manage dashboards"
+description: "Ask Dash to update your dashboard, explore results, and review changes. Discover available visualizations and organize the dashboards you use."
+keywords: ["Dash", "cards", "approve changes", "dashboard management", "refresh", "Show logic"]
+sidebarTitle: "Build and manage dashboards"
+---
+
+Keep your dashboard useful as your questions change. Ask Dash for the information you need, explore the results, and organize the dashboards you return to. To create your first one, follow the [Dashboard quickstart](/dashboards/quickstart).
+
+## Ask Dash to build or change your dashboard
+
+Open a dashboard you own and click **Ask Dash**. Describe what you want to add, change, or remove. Dash uses the dashboard and its current variables as context.
+
+For example, on a sales dashboard:
+
+<Prompt description="Add a breakdown of sales by customer to this dashboard. Keep the current reporting period.">
+  Add a breakdown of sales by customer to this dashboard. Keep the current reporting period.
+</Prompt>
+
+<Info>
+  **Screenshot placeholder: DASH-01**
+
+  Show a sales dashboard beside the open Dash panel with the customer-breakdown request. Keep the existing reporting period visible.
+</Info>
+
+To change one result, hover over its card header to reveal the controls. Click the speech-bubble button, **Ask Dash about this card**. The card appears in Dash's selected-card list. Describe the change and send your message.
+
+<Info>
+  **GIF placeholder: DASH-03**
+
+  Select one saved card using Ask Dash about this card, show it in the panel's context, and send a change request for that card.
+</Info>
+
+## Review and approve changes
+
+Dash shows a preview and a list of the changes it proposes. Check the information, labels, and time periods before saving.
+
+| What you want to do | Action |
+| --- | --- |
+| Save the proposed changes | Click **Approve all**. |
+| Adjust the proposal | Tell Dash what should change, then review its updated proposal. |
+| Keep the saved dashboard as it is | Click **Discard**. |
+
+If you close the Dash panel while a proposal is pending, click **Review** in the dashboard's pending-change notice to return to it.
+
+<Info>
+  **Video placeholder: DASH-04**
+
+  Show one proposed change, request one revision, then review and approve the revised change. End with the updated dashboard visible.
+</Info>
+
+Changes requested through Dash wait for approval. Direct presentation changes, such as changing a chart's color in its menu, save immediately when you have editing access. Some menus are unavailable while a proposal is pending.
+
+## Available cards and visualizations
+
+Dash chooses visualizations to suit the information you request. You can also ask for a particular format, such as “Show that as a table” or “Use a line chart for the monthly trend.”
+
+<Columns cols={2}>
+  <Card title="Tables" icon="table" href="/dashboards/cards/tables">
+    Explore records, highlight exceptions, and compare grouped results with a pivot.
+  </Card>
+  <Card title="Charts" icon="chart-column" href="/dashboards/cards/charts">
+    View trends with lines, compare categories with bars, or see shares with pie and donut charts.
+  </Card>
+  <Card title="Numbers" icon="hashtag" href="/dashboards/cards/numbers-and-gauges#track-a-key-metric">
+    Follow a key measure and compare it with an earlier period or a target.
+  </Card>
+  <Card title="Gauges" icon="gauge" href="/dashboards/cards/numbers-and-gauges#show-performance-against-a-range">
+    See where a measure falls within a range of colored zones.
+  </Card>
+</Columns>
+
+<Info>
+  **Screenshot placeholder: DASH-02**
+
+  Show a gallery of a table, chart, number, and gauge from the same documentation dashboard. Label each type and keep titles and units readable.
+</Info>
+
+## Explore a result with Dash
+
+Ask Dash to explain a result or investigate a change. It can use the selected cards and current variables as context. On a shared dashboard, identify the card in your message.
+
+For a chart, turn on **Data picker** to inspect values. Click a plotted point or pie/donut slice to prepare a question about it in Dash. Review the draft, then send it.
+
+<Info>
+  **Video placeholder: DASH-07**
+
+  Select one chart point with Data picker and send its prepared question to Dash. Show the investigation beside the original chart.
+</Info>
+
+To understand the steps behind a result, open **Show logic** in the card's header.
+
+<Info>
+  **Screenshot placeholder: DASH-08**
+
+  Capture Show logic open on a saved dashboard card, with its steps and the original result both visible.
+</Info>
+
+## Arrange and refresh your dashboard
+
+On a dashboard you own, drag cards using their move handles and resize them to give important results more room. You can also ask Dash to arrange the dashboard for you.
+
+<Info>
+  **GIF placeholder: DASH-05**
+
+  Enlarge one table and move it into a useful position. End with the saved layout and its neighboring cards visible.
+</Info>
+
+Click **Refresh** in the dashboard header to update the dashboard using the data available to Galvant. Wait for it to finish and check for any errors before using the updated results.
+
+<Info>
+  **GIF placeholder: DASH-06**
+
+  Use the dashboard's Refresh button. Show the refreshing state and completed dashboard; do not demonstrate individual-card refresh controls.
+</Info>
+
+## Find and manage saved dashboards
+
+Open **Dashboards** to find **Personal** dashboards you own and **Shared** dashboards available to you. Your browser's pinned dashboards appear under **Pinned**.
+
+<Info>
+  **Screenshot placeholder: DQ-04**
+
+  Show Personal, Shared, and Pinned in the dashboard list. Use clear dashboard names and highlight the selected dashboard.
+</Info>
+
+<AccordionGroup>
+  <Accordion title="Rename a dashboard">
+    On a dashboard you own, click its title, enter a new name, and press **Enter**.
+
+    <Info>
+      **GIF placeholder: DQ-05**
+
+      Rename an owned dashboard and show its updated title in the dashboard list.
+    </Info>
+  </Accordion>
+  <Accordion title="Pin a dashboard">
+    Hover over a dashboard in the list and click its pin control. Click it again to unpin. Pins are stored in your browser.
+
+    <Info>
+      **GIF placeholder: DASH-09**
+
+      Pin one dashboard and show it appearing under Pinned.
+    </Info>
+  </Accordion>
+  <Accordion title="Make your own copy">
+    Use **Duplicate** on a dashboard you own or **Duplicate and edit** on a shared dashboard. The copy belongs to you, so you can adapt it independently.
+
+    <Info>
+      **Screenshot placeholder: DASH-10**
+
+      Show Duplicate and edit on a shared dashboard, paired with the resulting owned copy. Make the different dashboard titles clear.
+    </Info>
+  </Accordion>
+  <Accordion title="Delete a dashboard">
+    On a dashboard you own, click **Delete dashboard**, the trash button in the header, and review the confirmation.
+
+    <Warning>
+      Deleting permanently removes the dashboard, its cards, and its Dash conversation history. This cannot be undone.
+    </Warning>
+
+    <Info>
+      **Screenshot placeholder: DQ-06**
+
+      Show the deletion confirmation for a sample dashboard. Do not confirm deletion to capture the image.
+    </Info>
+  </Accordion>
+</AccordionGroup>
+
+To let teammates use the same live dashboard, see [Share dashboards](/dashboards/sharing). To change a reporting period or another shared input, see [Use dashboard variables](/dashboards/variables).

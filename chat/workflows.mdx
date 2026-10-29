@@ -1,0 +1,139 @@
+---
+title: "Reusable workflows"
+description: "Save repeatable tasks as reusable workflows, run them with new inputs, review changes, and manage ownership and visibility in Galvant Chat."
+keywords: ["workflows", "reusable analysis", "slash commands", "workflow approval"]
+sidebarTitle: "Reusable workflows"
+---
+
+Save a task as a workflow when you want to repeat it with the same method. This guide follows a **Monthly sales review**: agree on the analysis with Scout, save it, then run it for another month.
+
+## Why create a workflow?
+
+An analysis can take several messages to refine: which records count, how a measure is calculated, and how the result should be presented. A workflow lets you reuse that method without explaining all those decisions again.
+
+For the monthly sales review, you agree on what counts as sales, how to group it by customer, and how to order the results. Save those decisions so that next time, you only need to choose the month. You can also share the workflow with teammates.
+
+For help choosing between a workflow, a new chat, and an existing discussion, see [Manage conversations](/chat/conversations#choose-a-conversation-a-new-chat-or-a-workflow).
+
+## What a workflow saves
+
+A saved workflow has a name, description, `/command`, visibility, and reusable instructions. Those instructions can describe inputs, calculations, and presentation.
+
+A workflow saves a method. Running it performs the task again using the available data. Creating or updating the definition does not itself run the analysis.
+
+<Note>
+  Saving a workflow does not schedule it to run automatically. This page covers workflows you launch from Chat.
+</Note>
+
+## Create a workflow with Scout
+
+The example below uses connected sales data. You can follow the same approach with a repeatable task from your own work.
+
+<Steps>
+  <Step title="Agree on the analysis">
+    Start a Chat conversation and send:
+
+    <Prompt description="Show sales for the last complete month, grouped by customer. Include the overall sales total and sort customers by sales from highest to lowest. State the dates and definition of sales you used.">
+      Show sales for the last complete month, grouped by customer. Include the overall sales total and sort customers by sales from highest to lowest. State the dates and definition of sales you used.
+    </Prompt>
+
+    Check the dates, sales definition, and customer totals. If you want something changed, tell Scout in the same conversation. Refine the analysis until it uses the method you want to repeat.
+  </Step>
+  <Step title="Ask Scout to save the method">
+    In the same conversation, send:
+
+    <Prompt description="Save this analysis as a private workflow named Monthly sales review. Keep the sales definition, customer grouping, overall total, and highest-to-lowest sort we agreed on. Let me choose the month each time, and use the last complete month when I do not specify one.">
+      Save this analysis as a private workflow named Monthly sales review. Keep the sales definition, customer grouping, overall total, and highest-to-lowest sort we agreed on. Let me choose the month each time, and use the last complete month when I do not specify one.
+    </Prompt>
+  </Step>
+</Steps>
+
+Scout can also suggest saving a workflow after you refine a repeatable task.
+
+<Info>
+  **GIF or video placeholder: WF-01**
+
+  Show the customer sales analysis, one refinement if needed, and the request to save Monthly sales review. End on Scout's proposed workflow, with the sales method and month input visible. Use the same example for WF-02 through WF-04.
+</Info>
+
+## Review and approve changes
+
+Check that Scout proposes **Monthly sales review** with the agreed method and private visibility. The month should be an input that defaults to the last complete month. Note its `/command`; you will use the saved command to run it.
+
+Choose **Yes** in the approval card to save the workflow, or **No** to decline. Creating, updating, and deleting workflows all require this approval.
+
+**A written response requests a change; it does not approve or save the workflow.**
+
+<Info>
+  **Screenshot placeholder: WF-02**
+
+  Show the approval card for creating Monthly sales review. Keep the proposed name, actual command, private visibility, description, and Yes/No choices visible. Use the saved command from this capture in WF-03.
+</Info>
+
+## Run a workflow and provide inputs
+
+<Steps>
+  <Step title="Choose the workflow">
+    Find the workflow you just saved under **Workflows** in Chat's conversation panel. Click its command to put it into the message box. You can also type `/` and select it from the menu.
+
+    To keep this run in a separate conversation, click **New chat** before choosing the workflow.
+  </Step>
+  <Step title="Send the command">
+    After the command, add “Use the month before last.” Press **Enter** to send. If Scout asks for clarification, answer its question to continue.
+
+    Sending the command without a month uses the last complete month, as requested when you saved this example.
+  </Step>
+  <Step title="Check the result">
+    Check that the dates changed to the requested month while the sales definition, customer grouping, and highest-to-lowest sort stayed the same. The report should still include the overall sales total.
+  </Step>
+</Steps>
+
+Each run applies the saved instructions to the available data. Results can change as the month or connected data changes.
+
+<Info>
+  **GIF placeholder: WF-03**
+
+  Select the actual saved command for Monthly sales review. Append Use the month before last and send it. End on the report with the requested dates, customer sales in descending order, and overall total visible.
+</Info>
+
+## Update a workflow or create a separate variant
+
+Suppose you now want each customer's share of total sales in every monthly review. Ask Scout to update the saved workflow:
+
+<Prompt description="Update my Monthly sales review workflow so future runs also show each customer's percentage of the overall sales total for the selected month. Keep the existing sales definition, month input, customer grouping, and highest-to-lowest sort.">
+  Update my Monthly sales review workflow so future runs also show each customer's percentage of the overall sales total for the selected month. Keep the existing sales definition, month input, customer grouping, and highest-to-lowest sort.
+</Prompt>
+
+Review the proposed update, including what stays the same, then choose **Yes** to save it. Run the workflow again and check the new percentages against the overall sales total. You can update workflows you own.
+
+If you only want the percentage added to this answer, ask Scout to revise the answer in the current conversation. Say that the saved workflow should stay as it is.
+
+<Accordion title="Keep a separate version">
+  Ask Scout to create a new workflow based on Monthly sales review and give it a different name. For example, keep the original customer report and create a second workflow that adds a product breakdown. Review and approve the new workflow before using it.
+</Accordion>
+
+<Info>
+  **Screenshot placeholder: WF-04**
+
+  Show the request to add each customer's percentage of total sales to Monthly sales review. Capture the update proposal with the existing method preserved and Yes/No choices visible. Make clear that this changes future runs.
+</Info>
+
+## Ownership, visibility, and pinning
+
+- **Private:** only you can run the workflow.
+- **Team-visible:** other people in your company can discover and run it. Sharing does not transfer ownership.
+- **Ownership:** only the owner can update or delete a user-saved workflow. Some workflows supplied by your company are managed separately.
+
+Hover over a workflow in the list to reveal its pin control. Pin it to move it toward the top of your workflow list. Pins are stored in your browser and do not change who can use the workflow.
+
+<Info>
+  **Screenshot placeholder: WF-05**
+
+  Show private and team-visible workflow indicators and the pin control revealed on hover. Use neutral names that do not reveal customer information.
+</Info>
+
+## Delete a workflow
+
+Ask Scout to delete the saved workflow and identify its name or command. Review and approve the deletion request. Scout confirms whether deletion succeeded.
+
+Deleting removes the reusable workflow definition. If you want to keep using the method, ask for an update instead of deleting it.
