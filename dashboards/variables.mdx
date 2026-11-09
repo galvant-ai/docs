@@ -13,11 +13,9 @@ Find **Dashboard variables** above the cards. Open a choice, such as a customer 
 
 For example, select a customer to see their sales total, trend, and orders together. A card that does not use that customer variable keeps its own scope.
 
-<Info>
-  **GIF placeholder: VAR-01**
-
-  Select one customer in the variable bar. Show the sales total, trend, and order table updating together, with a company-wide card unchanged. Keep the selected customer visible.
-</Info>
+<Frame caption="Select a value in the variable bar and the cards that use it update together.">
+  <video autoPlay muted loop playsInline src="/assets/clips/dashboard_variables.mp4" />
+</Frame>
 
 A table's column filter narrows the rows in that table. A dashboard variable changes the input used by every card connected to it.
 
@@ -25,44 +23,30 @@ A table's column filter narrows the rows in that table. A dashboard variable cha
 
 Open the date-range variable in **Dashboard variables**. Use **Dynamic** for a period that moves over time or **Static** for fixed dates.
 
-<Tabs>
-  <Tab title="Dynamic">
+<Columns cols={2}>
+  <Card title="Dynamic" icon="rotate">
     Choose a preset such as **Last 30 days**. The selection takes effect when you click it.
 
-    For a custom period, use **Customized**. To see the last three complete months:
+    For a custom period, use **Customized**. To see the last three complete months, set **Last** to **3** and the unit to **months**, select **Complete periods only** to exclude the current partial month, then click **Apply**.
+  </Card>
+  <Card title="Static" icon="calendar">
+    Enter **Start** and **End**, or select a range on the calendar, then click **Apply**.
 
-    1. Set **Last** to **3** and the unit to **months**.
-    2. Select **Complete periods only** to exclude the current partial month.
-    3. Click **Apply**.
+    This selects fixed calendar dates. The range does not move forward with time, so use it for a closed period such as last quarter.
+  </Card>
+</Columns>
 
-    <Info>
-      **GIF placeholder: VAR-03**
+<Info>
+  **Video placeholder: VAR-03**
 
-      Open Dynamic and set Last 3 Months with Complete periods only. Click Apply and show the resulting date label and updated cards.
-    </Info>
-  </Tab>
-  <Tab title="Static">
-    Enter **Start** and **End**, or select a range on the calendar, then click **Apply**. This selects fixed calendar dates; the range does not move forward with time.
-
-    <Info>
-      **Screenshot placeholder: VAR-08**
-
-      Show Static with Start and End filled in, the matching calendar range, and Apply visible.
-    </Info>
-  </Tab>
-</Tabs>
+  Open the date-range variable. In Dynamic, set Last 3 months with Complete periods only, click Apply, and show the date label and updated cards. Then switch to Static, fill in Start and End with the matching calendar range, and click Apply.
+</Info>
 
 ## See which cards use a variable
 
 Click the card count beside a variable's name, such as **3 cards**. The **Used by these cards** list shows its connected cards. Select a card in that list to jump to it.
 
 Cards also show their current variable values beneath their titles. Use these labels to check the scope of a result.
-
-<Info>
-  **Screenshot placeholder: VAR-04**
-
-  Open a variable's 3 cards menu beside its name. Show Used by these cards and the matching variable values below a card title.
-</Info>
 
 ## Ask Dash to add or change variables
 
@@ -124,28 +108,13 @@ A schedule keeps those selections until you save it again. Dynamic dates move wi
   <Accordion title="Text, number, and multiple-choice inputs">
     For text or number inputs, enter a value and press **Enter** or click outside the field to apply it. For multiple choices, select the values you want. Where **All** is available, it includes all choices within that variable's scope.
 
-    <Info>
-      **Screenshot placeholder: VAR-09**
-
-      Show a multiple-choice variable with two values selected and its search field visible. Keep the affected cards in view.
-    </Info>
   </Accordion>
   <Accordion title="Show the selected value in a title">
     Ask Dash to make a dashboard name, card title, or column label use a variable value. For example: “Include the reporting period in the sales trend title, and update it when the period changes.”
 
-    <Info>
-      **GIF placeholder: VAR-06**
-
-      Change the reporting period and show a configured sales-trend title updating to match it.
-    </Info>
   </Accordion>
   <Accordion title="Rename or reorder variables">
     On a dashboard you own, use a variable's name control to rename it. Move it with its drag handle to change its position in the bar. Linked variables move as a group.
 
-    <Info>
-      **GIF placeholder: VAR-07**
-
-      Move one variable to a new position in the bar. Keep its name and connected-card count visible so it can be followed through the move.
-    </Info>
   </Accordion>
 </AccordionGroup>

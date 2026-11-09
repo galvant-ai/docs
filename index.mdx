@@ -1,61 +1,108 @@
 ---
-title: "Quickstart"
-description: "Ask Scout your first question about sales, finance, or production. Open Galvant Chat, explore connected data, and start working with tables and charts."
-keywords: ["Galvant", "quickstart", "Scout", "sales", "finance", "production"]
-sidebarTitle: "Quickstart"
+title: "Welcome to Galvant"
+description: "Ask Scout about your business data, build dashboards with Dash, and automate the work you repeat. Start here to find the right guide for your first task."
+keywords: ["Galvant", "quickstart", "Scout", "Dash", "chat", "dashboards", "workflows"]
+sidebarTitle: "Start here"
+mode: "wide"
 ---
 
-Start using Galvant by asking Scout what data you can work with. Open your company's Galvant app alongside this guide.
+<div className="hero">
+  <p className="hero-subtitle">
+    Ask Scout about your business data, build dashboards with Dash, and automate the work you repeat.
+  </p>
+</div>
 
-<Info>
-  **Screenshot placeholder: QS-01**
+## Choose a path
 
-  Show Galvant Chat with the sidebar, New chat button, and message box visible. Use this as the opening product image for the guide.
-</Info>
-
-## Open a new chat
-
-Click **Chat** in the app sidebar, then click **New chat**.
-
-## Choose your first question
-
-Choose an area relevant to your work. Copy its question into the message box and press **Enter**. Scout uses the data connected to your company and available to your account.
-
-<Tabs>
-  <Tab title="Sales">
-    <Prompt description="What sales data can you access? Show the top 10 customers by sales in the last complete month.">
-      What sales data can you access? Show the top 10 customers by sales in the last complete month.
-    </Prompt>
-  </Tab>
-  <Tab title="Finance">
-    <Prompt description="What finance data can you access? Show the outstanding customer invoices that are overdue, grouped by customer.">
-      What finance data can you access? Show the outstanding customer invoices that are overdue, grouped by customer.
-    </Prompt>
-  </Tab>
-  <Tab title="Production">
-    <Prompt description="What production data can you access? Show the production orders that are past their planned completion date, with their current status.">
-      What production data can you access? Show the production orders that are past their planned completion date, with their current status.
-    </Prompt>
-  </Tab>
-</Tabs>
-
-If Scout asks you to clarify a measure or date, answer in the **Question** card to continue.
-
-<Info>
-  **Screenshot placeholder: QS-02**
-
-  Show one of the starter questions and Scout's completed answer with its result cards. Use an example supported by the capture account's connected data.
-</Info>
-
-## Where to go next
-
-<Columns cols={2}>
-  <Card title="Ask questions with Scout" icon="message" href="/chat/ask-questions">
-    Dictate messages, answer Scout's questions, and return to ongoing work.
+<Columns cols={3}>
+  <Card title="Start a chat with Scout" icon="message" href="/chat/ask-questions">
+    Ask questions about your connected data and get answers as tables and charts.
   </Card>
-  <Card title="Use tables and charts" icon="chart-line" href="/chat/ask-questions/tables-and-charts">
-    Explore result cards, refresh their data, and download tables as Excel.
+  <Card title="Create a dashboard with Dash" icon="chart-line" href="/dashboards/quickstart">
+    Describe what you want to track, share it with your company, and schedule reports.
+  </Card>
+  <Card title="Automate a repeatable task" icon="repeat" href="/chat/workflows">
+    Save a task as a reusable workflow and run it again with new inputs.
   </Card>
 </Columns>
 
-To build a dashboard, start with the [Dashboard quickstart](/dashboards/quickstart).
+## Meet Scout and Dash
+
+Galvant has two assistants. Both work with the data connected to your company and available to your account.
+
+<Tabs>
+  <Tab title="Scout in Chat">
+    Scout answers questions in a conversation. Type or dictate a message, answer its clarifying questions, and keep asking follow-ups in the same thread.
+
+    - Ask about sales, finance, production, procurement, inventory, or quality.
+    - Attach spreadsheets, PDFs, images, and STEP models and ask about what is inside them.
+    - Get results as tables and charts you can expand, refresh, and download as Excel.
+    - Open **Show logic** to see the steps, queries, and tables behind an answer.
+
+    <Tip>
+      New to Chat? Open **Chat** in the app sidebar, click **New chat**, and send one of the [starter questions](/chat/ask-questions#choose-your-first-question).
+    </Tip>
+  </Tab>
+  <Tab title="Dash in Dashboards">
+    Dash builds and maintains dashboards. Describe what you want to track and Dash chooses how to organize and visualize it. Nothing is saved until you click **Approve all**.
+
+    - Combine tables, charts, numbers, and gauges on one dashboard.
+    - Switch the period, customer, or location across several cards with dashboard variables.
+    - Share a live dashboard with selected people or your whole company.
+    - Download an Excel report, email it now, or schedule recurring delivery.
+
+    <Tip>
+      Build your first dashboard, share it, and schedule a weekly report in the [Dashboard quickstart](/dashboards/quickstart).
+    </Tip>
+  </Tab>
+</Tabs>
+
+## Next steps
+
+<Columns cols={2}>
+  <Card title="Work with files" icon="paperclip" href="/chat/files">
+    Attach a workbook, PDF, image, or CAD model and ask Scout about what is inside it.
+  </Card>
+  <Card title="Use tables and charts" icon="table" href="/chat/ask-questions/tables-and-charts">
+    Expand tables, inspect chart values, refresh a card, and download a table as Excel.
+  </Card>
+  <Card title="Agent trace and Show logic" icon="magnifying-glass" href="/chat/ask-questions/agent-trace-and-logic">
+    Follow Scout's work as it runs and see the sources behind an answer.
+  </Card>
+  <Card title="Use dashboard variables" icon="sliders" href="/dashboards/variables">
+    Change the reporting period or another input and update every connected card at once.
+  </Card>
+  <Card title="Share dashboards" icon="users" href="/dashboards/sharing">
+    Give teammates or your company access to a live dashboard and send them its link.
+  </Card>
+  <Card title="Export and email reports" icon="envelope" href="/dashboards/reports">
+    Download an Excel report, send it now, or schedule it to arrive every week.
+  </Card>
+</Columns>
+
+## Good to know
+
+<AccordionGroup>
+  <Accordion title="Nothing changes without your approval">
+    Dash shows a preview and a list of proposed changes. Click **Approve all** to save them or **Discard** to keep the dashboard as it is. Scout asks for approval before creating, updating, or deleting a workflow. Choose **Yes** in the approval card to allow it. A written reply requests a change; it does not approve one.
+  </Accordion>
+  <Accordion title="What Scout can read from a file">
+    Scout reads Excel, CSV, and TSV spreadsheets, PDFs, PNG, JPG, GIF, and WebP images, and STEP models. Each file can be up to 50 MB. Scout reads the first 1,000 rows of each sheet, so attach a smaller file if the records you need are further down. See [Work with files](/chat/files).
+  </Accordion>
+  <Accordion title="Who can see your work">
+    Conversations belong to you. A new dashboard is private until you share it with selected people or with everyone in your company. Viewers can explore, refresh, and ask Dash questions, but need their own copy to change the saved setup. Pins for conversations, workflows, and dashboards are stored in your browser and do not change who can see them.
+  </Accordion>
+  <Accordion title="How current the data is">
+    Refreshing a card or dashboard runs the analysis again against the data available to Galvant. It does not trigger a sync from your company's source systems. A **Dynamic** date range moves with time, while a **Static** range stays fixed. If results look stale, check the selected variables first, then see [Troubleshooting](/help/troubleshooting#data-does-not-look-current).
+  </Accordion>
+</AccordionGroup>
+
+## Explore the docs
+
+- [Ask questions with Scout](/chat/ask-questions): send or dictate messages, answer Scout's questions, and return to ongoing work.
+- [Work with files](/chat/files): bring spreadsheets, PDFs, images, and CAD models into a conversation.
+- [Reusable workflows](/chat/workflows): save a repeatable task, run it with new inputs, and share it with your team.
+- [Manage conversations](/chat/conversations): find, pin, rename, and delete conversations.
+- [Build and manage dashboards](/dashboards/use-dash): ask Dash for changes, explore results, and organize the dashboards you use.
+- [Cards and visualizations](/dashboards/cards/tables): tables, charts, numbers, and gauges, with practical examples of each.
+- [Troubleshooting](/help/troubleshooting): resolve unexpected answers, file and dictation issues, and failed exports or emails.
