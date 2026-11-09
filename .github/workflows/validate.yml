@@ -1,0 +1,16 @@
+name: Validate docs
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npx --yes mint@4.3.6 validate --no-build --telemetry false
+      - run: npx --yes mint@4.3.6 broken-links --telemetry false
