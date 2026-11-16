@@ -1,0 +1,66 @@
+---
+title: "Roles and permissions"
+description: "Bundle permissions into roles, understand the permission groups, create or edit a role, and assign it to people from the Admin Dashboard."
+keywords: ["admin", "roles", "permissions", "feature access", "table access", "system roles"]
+sidebarTitle: "Roles and permissions"
+---
+
+A role is a bundle of permissions. You create a role once, then assign it to as many people as you need from the Admin **Dashboard**. When someone has several roles, they receive the combined permissions of all of them.
+
+Roles save you from setting permissions person by person. A new finance analyst gets the same access as the rest of the team by assigning the same role, and a change to the role reaches everyone who has it.
+
+## What a role controls
+
+Open **Admin** and click **Roles**. The list shows each role with its **Description**, how many **Permissions** it grants, how many **Users** have it, and when it was last **Updated**.
+
+Inside a role, permissions are organized into groups:
+
+| Group | What it controls |
+| --- | --- |
+| Feature access | Which areas of Galvant the person can open, such as Chat, Dashboards, Insights, and Admin. |
+| Table access | Which connected data tables the person can query in Chat and see in dashboards. |
+
+Your company may also see groups for other Galvant modules, such as RFQ team access or Procurement inbox access, if those are enabled for you.
+
+Each permission is either **None** or **Full**. A person with no access to a table cannot query it in Chat, and dashboard cards that use it will not return results for them.
+
+## Built-in roles
+
+Roles marked **System** are provided by Galvant. You can adjust their permissions, but you cannot rename or delete them. Keep them as a stable starting point and create your own roles for anything specific to a team.
+
+## Create a role
+
+<Steps>
+  <Step title="Start a new role">
+    On the Roles page, click **New role**.
+  </Step>
+  <Step title="Name it">
+    Under **Role details**, enter a **Role name** that people will recognize, such as a job function or team, and a short **Description** of what the role grants.
+  </Step>
+  <Step title="Choose permissions">
+    Under **Permissions**, set each permission to **None** or **Full**. Use **Grant all** to start from full access and remove what the role should not have, or **Clear** to start from nothing and add only what it needs. Use **Search permissions...** to find a specific feature or table.
+  </Step>
+  <Step title="Save">
+    Click **Create role**. The role is now available to assign from the Dashboard.
+  </Step>
+</Steps>
+
+<Info>
+  **Screenshot placeholder: ADMIN-02**
+
+  Show a role's Permissions table with the Feature access and Table access groups visible, a mix of None and Full selections, and the Grant all, Clear, and Search permissions controls in view.
+</Info>
+
+## Edit or delete a role
+
+Open a role from the Roles page. Change its details or permissions, then click **Save role**. The change applies to everyone who has the role the next time they load Galvant.
+
+To remove a role you created, click **Delete**. People who had the role keep their other roles.
+
+## Assign a role to a person
+
+Roles are assigned on each person's page, not from the Roles page. Open **Dashboard**, click the person, check the role under **Assigned roles**, and click **Save changes**. See [Manage users](/admin/users#edit-a-person-or-change-their-roles).
+
+<Tip>
+  Start with a small number of roles that match how your company works, such as a leadership role with every table, a plant role with production tables, and a finance role with invoices and the general ledger. Add a narrower role only when a real need appears.
+</Tip>

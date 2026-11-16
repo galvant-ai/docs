@@ -19,18 +19,18 @@
   "navigation": {
     "groups": [
       {
-        "group": "Start here",
-        "pages": ["index"]
+        "group": "Welcome",
+        "pages": [
+          "index"
+        ]
       },
       {
         "group": "Chat",
         "pages": [
           {
-            "group": "Ask questions with Scout",
-            "root": "chat/ask-questions",
-            "expanded": true,
-            "directory": "card",
+            "group": "Ask Scout",
             "pages": [
+              "chat/ask-questions",
               "chat/ask-questions/tables-and-charts",
               "chat/ask-questions/agent-trace-and-logic",
               "chat/ask-questions/give-feedback"
@@ -44,9 +44,14 @@
       {
         "group": "Dashboards",
         "pages": [
-          "dashboards/quickstart",
-          "dashboards/use-dash",
-          "dashboards/variables",
+          {
+            "group": "Work with Dash",
+            "pages": [
+              "dashboards/quickstart",
+              "dashboards/use-dash",
+              "dashboards/variables"
+            ]
+          },
           {
             "group": "Cards and visualizations",
             "expanded": true,
@@ -61,8 +66,17 @@
         ]
       },
       {
+        "group": "Admin",
+        "pages": [
+          "admin/users",
+          "admin/roles"
+        ]
+      },
+      {
         "group": "Help",
-        "pages": ["help/troubleshooting"]
+        "pages": [
+          "help/troubleshooting"
+        ]
       }
     ]
   },
@@ -88,5 +102,8 @@
       "linkedin": "https://www.linkedin.com/company/galvant",
       "website": "https://galvant.ai"
     }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   }
 }
